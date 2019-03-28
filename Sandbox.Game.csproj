@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{E7562513-36BA-4D11-A927-975E5375ED10};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>3b4c580c-26fd-7ce3-861a-13fd45c91e38</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CryEngine.Game</RootNamespace>
+    <AssemblyName>CRYENGINE.CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <UseMSBuildEngine>false</UseMSBuildEngine>
+    <CryEngineLauncherPath>D:\CryEngine\Engine\Crytek\CRYENGINE_5.5\bin\win_x64\\GameLauncher.exe</CryEngineLauncherPath>
+    <CryEngineProjectPath>D:\VikingsRiseFromAshes\Game.cryproject</CryEngineProjectPath>
+    <CryEngineCommandArguments></CryEngineCommandArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>D:/VikingsRiseFromAshes/bin</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>D:/VikingsRiseFromAshes/bin</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="CryEngine.Common">
+      <HintPath>D:\CryEngine\Engine\Crytek\CRYENGINE_5.5\bin\win_x64\\CryEngine.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CryEngine.Core">
+      <HintPath>D:\CryEngine\Engine\Crytek\CRYENGINE_5.5\bin\win_x64\\CryEngine.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CryEngine.Core.UI">
+      <HintPath>D:\CryEngine\Engine\Crytek\CRYENGINE_5.5\bin\win_x64\\CryEngine.Core.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+        <Reference Include="Game">
+      <HintPath>bin/Game.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="assets\Code\Player\Player.cs" />
+    <Compile Include="assets\Code\Player\PlayerAnimations.cs" />
+    <Compile Include="assets\Code\Player\PlayerView.cs" />
+    <Compile Include="assets\Code\Weapons\BaseWeapon.cs" />
+    <Compile Include="assets\Code\Weapons\Bullet.cs" />
+    <Compile Include="assets\Code\Weapons\Rifle.cs" />
+
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+
+</Project>

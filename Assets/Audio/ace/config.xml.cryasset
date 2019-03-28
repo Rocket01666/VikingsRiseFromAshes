@@ -1,0 +1,8 @@
+<AssetMetadata version="0" type="Xml" guid="ed9ec918-66dc-bcd6-c739-e1d635c9dcd1">
+ <Files>
+  <File path="config.xml"/>
+ </Files>
+ <Details>
+  <Detail name="rootTag">ACBConfig</Detail>
+ </Details>
+</AssetMetadata>
